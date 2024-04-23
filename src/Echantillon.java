@@ -1,19 +1,9 @@
 public class Echantillon {
-    private double[] inputs; // Les entrées de l'échantillon
-    private double expectedOutput; // La sortie attendue pour cet échantillon
+    private int[] entrees;
+    private int sortieAttendu;
 
-    public Echantillon(double[] inputs, double expectedOutput) {
-        this.inputs = inputs;
-        this.expectedOutput = expectedOutput;
-    }
-
-    public double[] getInputs() {
-        return inputs;
-    }
-
-    public double getExpectedOutput() {
-        return expectedOutput;
+    public Echantillon(int[] entrees, int sortieAttendu) {
+        this.entrees = entrees;
+        this.sortieAttendu = sortieAttendu;
     }
 }
-
-
