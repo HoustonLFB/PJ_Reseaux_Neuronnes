@@ -6,7 +6,7 @@ public class NeuroneCache extends Neurone{
 
     double activate(double[] entrees) {
         double sum = 0;
-        for (int i = 0; i < poids.length; i++) {
+        for (int i = 0; i < entrees.length; i++) {
             sum += entrees[i] * poids[i];
         }
         return sigmoid(sum + biais);

@@ -7,7 +7,7 @@ public class NeuroneSortie extends Neurone{
     @Override
     double activate(double[] inputs) {
         double sum = 0;
-        for (int i = 0; i < poids.length; i++) {
+        for (int i = 0; i < inputs.length; i++) {
             sum += inputs[i] * poids[i];
         }
         return sigmoid(sum + biais);
