@@ -12,6 +12,6 @@ public class CoucheEntree extends Couche {
             for (int i = 0; i < neurones.length; i++) {
             outputs[i] = neurones[i].activate(inputs);
         }
-            return inputs;
+            return outputs;
     }
 }

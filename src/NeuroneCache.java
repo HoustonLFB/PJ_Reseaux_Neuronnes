@@ -4,10 +4,11 @@ public class NeuroneCache extends Neurone{
         super(poids, biais);
     }
 
-    double activate(double[] entrees) {
+    @Override
+    double activate(double[] inputs) {
         double sum = 0;
-        for (int i = 0; i < entrees.length; i++) {
-            sum += entrees[i] * poids[i];
+        for (int i = 0; i < inputs.length; i++) {
+            sum += inputs[i] * poids[i];
         }
         return sigmoid(sum + biais);
     }

@@ -21,29 +21,24 @@ public class Reseau {
 
     /**
      * Méthode feedForward qui envoie les valeurs d'entrée à travers le réseau de neurones.
-     * @param inputs Les valeurs d'entrée à envoyer à travers le réseau de neurones.
+     * @param entrees Les valeurs d'entrée à envoyer à travers le réseau de neurones.
      * @return Les valeurs de sortie de la couche de sortie.
      */
-    public double[] feedForward(double[] inputs) {
-        double[] outputs = null;
+    public double[] feedForward(double[] entrees) {
+        double[] sortie = entrees;
 
-        // Passer les valeurs d'entrée à travers les couches d'entrée
-        for (CoucheEntree couche : couchesEntree) {
-            outputs = couche.processInputs(inputs);
-            inputs = outputs; // Les sorties de la couche actuelle deviennent les entrées de la couche suivante
+        //for (CoucheEntree couche : couchesEntree) {
+        //    sortie = couche.processInputs(sortie);
+        //}
+        if (couchesCachee != null) {
+            for (CoucheCachee couche : couchesCachee) {
+                sortie = couche.processInputs(sortie);
+            }
         }
-
-        // Passer les valeurs à travers les couches cachées
-        for (CoucheCachee couche : couchesCachee) {
-            outputs = couche.processInputs(inputs);
-            inputs = outputs; // Les sorties de la couche actuelle deviennent les entrées de la couche suivante
-        }
-
-        // Passer les valeurs à travers les couches de sortie
         for (CoucheSortie couche : couchesSortie) {
-            outputs = couche.processInputs(inputs);
+            sortie = couche.processInputs(sortie);
         }
-
-        return outputs;
+        return sortie;
     }
+
 }

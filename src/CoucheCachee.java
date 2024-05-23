@@ -1,5 +1,7 @@
+/**
+ * Classe représentant une couche cachée du réseau de neurones
+ */
 public class CoucheCachee extends Couche{
-
 
     public CoucheCachee(Neurone[] neurones) {
         super(neurones, TypeCouche.CACHEE);
@@ -11,5 +13,6 @@ public class CoucheCachee extends Couche{
             outputs[i] = neurones[i].activate(inputs);
         }
         return outputs;
+
     }
 }

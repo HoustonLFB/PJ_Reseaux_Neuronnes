@@ -10,7 +10,7 @@ public class NeuroneEntree extends Neurone{
 
     double activate(double[] entrees) {
         double somme = 0;
-        for (int i = 0; i < this.poids.length; i++) {
+        for (int i = 0; i < entrees.length; i++) {
             somme += entrees[i] * this.poids[i];
         }
         return somme + this.biais;
