@@ -1,3 +1,5 @@
+package Echantillon;
+
 public class LotEchantillons {
     private Echantillon[] echantillons;
 

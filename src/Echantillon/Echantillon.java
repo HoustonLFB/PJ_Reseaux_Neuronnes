@@ -1,3 +1,5 @@
+package Echantillon;
+
 public class Echantillon {
     private int[] entrees;
     private int sortieAttendu;

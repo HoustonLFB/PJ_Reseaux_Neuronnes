@@ -1,3 +1,7 @@
+package Couche;
+
+import Neurone.Neurone;
+
 /**
  * Classe représentant une couche cachée du réseau de neurones
  */

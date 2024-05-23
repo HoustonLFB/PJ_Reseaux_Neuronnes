@@ -1,3 +1,6 @@
+package Couche;
+
+import Neurone.Neurone;
 public class CoucheSortie extends Couche{
 
 

@@ -1,5 +1,7 @@
+package Neurone;
+
 /**
- * Classe abstraite Neurone
+ * Classe abstraite Neurone.Neurone
  * Cette classe est la classe mère de tous les neurones
  * Elle contient les attributs poids et biais
  * Elle contient les méthodes getPoids, setPoids, getBiais, setBiais et activate
@@ -30,5 +32,5 @@ public abstract class Neurone {
         this.biais = biais;
     }
 
-    abstract double activate(double[] entrees);
+    public abstract double activate(double[] entrees);
 }
