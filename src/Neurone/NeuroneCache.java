@@ -10,16 +10,18 @@ public class NeuroneCache extends Neurone{
         super(poids, biais);
     }
 
-    @Override
-    public double activate(double[] inputs) {
-        double sum = 0;
-        for (int i = 0; i < inputs.length; i++) {
-            sum += inputs[i] * poids[i];
-        }
-        return sigmoid(sum + biais);
-    }
 
-    private double sigmoid(double x) {
-        return 1.0 / (1.0 + Math.exp(-x));
+    /**
+     * Méthode activate qui calcule la sortie du neurone de la couche cachée. LINAIRE
+     * @param entrees Les valeurs d'entrée du neurone.
+     * @return La sortie du neurone.
+     */
+    @Override
+    public double activate(double[] entrees) {
+        double somme = 0;
+        for (int i = 0; i < entrees.length; i++) {
+            somme += entrees[i] * poids[i];
+        }
+        return (somme + biais);
     }
 }
